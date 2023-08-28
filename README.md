@@ -1,2 +1,2 @@
 # Data-Structures-And-Algorithms
-Домашни и проект от курса Структури от данни и програмиране
+Homeworks, exercises with problems and project from the course DSA in FMI
