@@ -1,0 +1,48 @@
+load Lozenec
+Uspeshnia - Gosho
+Uspeshnia - Misho
+Gosho - Pesho
+Gosho - Dancho
+Pesho - Alex
+Dancho-Boris
+Dancho-Kamen
+Uspeshnia - Slavi
+Slavi - Slav1
+Slavi - Slav2
+Slav1-Mecho
+Mecho-Q12Adl
+
+find Lozenec Alex
+num_subordinates Lozenec Alex
+num_subordinates Lozenec Slavi
+manager Lozenec Slav1
+manager Lozenec Slav3
+num_employees Lozenec
+num_employees Lozenec2
+overloaded Lozenec
+
+load Lozenec_new
+Uspeshnia - MishoPetrov
+MishoPetrov - Misho
+MishoPetrov - Slav
+
+join Lozenec Lozenec_new LozBig
+save LozBig LozBig.data
+manager LozBig Misho
+num_subordinates LozBig MishoPetrov
+fire LozBig MishoPetrov
+num_subordinates LozBig Uspeshnia
+save LozBig LozBig.data
+hire Lozenec MishoPetrov Misho
+salary Lozenec Gosho
+hire Lozenec_new Mitko Uspeshnia
+hire Lozenec_new MishoPetrov Mitko
+incorporate Lozenec_new
+save Lozenec_new
+hire Lozenec_new Ivan Misho
+hire Lozenec_new Stojan Ivan
+modernize Lozenec_new
+save Lozenec_new
+save Lozenec_new loz.data
+exit
+lozenec.data
