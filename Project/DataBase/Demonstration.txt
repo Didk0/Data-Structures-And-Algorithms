@@ -1,0 +1,61 @@
+Select:
+1. */Name ID
+2. ORDER BY
+3. DISTINCT
+
+// Invalid inputs:
+Select
+Select *
+Select * FROM
+Select * FROM Sample DISTINCT ORDER BY Name
+Remove
+Remove FROM
+Remove FROM Sample
+Remove FROM Sample WHERE
+...
+
+// Demonstration:
+CreateTable People (ID:Int, Name:String, Money:Double, Bithdate:DateTime) Index ON ID
+Insert INTO People {(1, "Ivan", 15.65, 1-2-2000), (3, "Gosho", 5.5, 12-5-1999), (2, "Pesho", 17.34, 15-12-2001)}
+Select ID FROM People 
+Select Name ID FROM People 
+Select * FROM People ORDER BY Money
+Select * FROM People ORDER BY Name
+Select Name FROM People WHERE ID == 1
+Select Name FROM People WHERE ID != 2
+Select Name FROM People WHERE ID > 1
+Select ID Name FROM People WHERE ID > 1 AND Name >= "Haskell"
+Select ID Name FROM People WHERE ID >= 1 AND Name >= "Haskell"
+Remove FROM People WHERE ID == 1
+Select * FROM People
+Remove FROM People WHERE ID <= 3
+Select * FROM People
+DropTable People 
+ListTables
+
+CreateTable People (ID:Int, Name:String, Money:Double, Birthdate:DateTime) Index ON ID
+TableInfo People
+Insert INTO People {(1, "Ivan", 15.65, 1-2-2000), (3, "Gosho", 5.5, 12-5-1999), (2, "Pesho", 17.34, 15-12-2001), (5, "Ivan", 10.20, 20-10-2000), (4, "Ivo", 4.10, 15-12-2001), (6, "Deyan", 24.15, 20-4-2000)}
+TableInfo People
+Select * FROM People WHERE (ID >= 1 AND ID < 4) OR ID == 6 ORDER BY Name
+Select * FROM People WHERE (ID >= 1 AND ID < 6) OR ID == 6 ORDER BY Birthdate
+Select Name FROM People WHERE (ID >= 1 AND ID < 5) OR (ID == 6 OR ID > 3) ORDER BY Name DISTINCT
+Remove FROM People WHERE NOT (Money >= 10)
+TableInfo People
+Select * FROM People
+Remove FROM People WHERE Name == "Ivan" AND ID > 1
+Select * FROM People
+CreateIndex ON People Name
+TableInfo People
+Remove FROM People WHERE Name == "Ivan" OR ID > 1
+TableInfo People
+Insert INTO People {(1, "Ivan", 15.65, 1-2-2000), (3, "Gosho", 5.5, 12-5-1999), (2, "Pesho", 17.34, 15-12-2001), (5, "Ivan", 10.20, 20-10-2000), (4, "Ivo", 4.10, 15-12-2001), (6, "Deyan", 24.15, 20-4-2000)}
+TableInfo People
+CreateTable Movies (MovieName:String, Profit:Double, ReleaseDate:DateTime)
+ListTables
+Insert INTO Movies {("Star Wars", 859342.56, 26-4-1982), ("Lord of the rings", 543854.66, 14-3-2003)}
+Select * FROM Movies WHERE Profit > 600000
+DropTable Movies
+Select * FROM Movies
+ListTables
+Quit
