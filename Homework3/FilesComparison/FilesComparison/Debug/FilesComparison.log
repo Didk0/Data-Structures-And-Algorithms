@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Programming\DSA 2021-2022\Homeworks\Homework3\FilesComparison\FilesComparison\HashMap.h(8,38): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Programming\DSA 2021-2022\Homeworks\Homework3\FilesComparison\FilesComparison\HashMap.h(108,21): warning C4244: 'initializing': conversion from 'float' to 'size_t', possible loss of data
+  FilesComparison.vcxproj -> C:\Programming\DSA 2021-2022\Homeworks\Homework3\FilesComparison\Debug\FilesComparison.exe
